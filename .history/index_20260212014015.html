@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gabe's Wordle</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="spacer"></div>
+    <h1 class="title"> Gabe's Wordle</h1>
+    <button id="helpBtn" class="iconBtn" aria-label="Help">?</button>
+  </header>
+
+  <main class="wrap">
+    <div id="board" class="board" aria-label="Wordle board"></div>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <div class="kb" id="keyboard" aria-label="Keyboard"></div>
+  </main>
+
+  <!-- Modal -->
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modalCard">
+      <div class="modalTop">
+        <h2 id="modalTitle">💛</h2>
+        <button id="closeModal" class="iconBtn" aria-label="Close">✕</button>
+      </div>
+      <p id="modalMsg" class="modalMsg"></p>
+      <div class="modalActions">
+        <button id="copyBtn" class="primaryBtn">Copy result</button>
+        <button id="playAgainBtn" class="secondaryBtn">Play again</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
