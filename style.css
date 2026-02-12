@@ -186,7 +186,7 @@ body{
 }
 .secondaryBtn:hover{border-color:#4a4a4a}
 
-/* --- flip animation --- */
+
 @keyframes flip {
   0% { transform: rotateX(0deg); }
   50% { transform: rotateX(90deg); }
@@ -199,17 +199,17 @@ body{
 }
 
 
-/* blue emoji */
+/* blue emoji lol */
 .winMedia {
   width: 100%;
   max-height: 240px;
-  height: 240px;          /*  a consistent height */
-  object-fit: contain;    /*  no cropping */
+  height: 240px;         
+  object-fit: contain;   
   object-position: center;
   border-radius: 14px;
   margin: 10px 0 12px;
   border: 1px solid #2a2a2a;
-  background: #0f0f10;    /* makes empty space look clean */
-  padding: 8px;           /*  breathing room */
+  background: #0f0f10;    
+  padding: 8px;           
 }
 
