@@ -219,12 +219,12 @@ function revealRow(r, guess) {
   const rowEl = boardEl.children[r];
   const tiles = Array.from(rowEl.children);
 
-  // Wordle-style marking with duplicate handling
+  
   const sol = SOLUTION.split("");
   const g = guess.split("");
   const rowMarks = Array(COLS).fill("absent");
 
-  // First pass: correct
+  
   for (let i = 0; i < COLS; i++) {
     if (g[i] === sol[i]) {
       rowMarks[i] = "correct";
@@ -233,7 +233,7 @@ function revealRow(r, guess) {
     }
   }
 
-  // Second pass: present
+  
   for (let i = 0; i < COLS; i++) {
     if (g[i] == null) continue;
     const idx = sol.indexOf(g[i]);
@@ -243,7 +243,7 @@ function revealRow(r, guess) {
     }
   }
 
-  // save marks 
+
   for (let i = 0; i < COLS; i++) {
     marks[r][i] = rowMarks[i];
   }
@@ -253,13 +253,13 @@ function revealRow(r, guess) {
     // clear any previous
     tile.classList.remove("flip", "correct", "present", "absent");
 
-    // stagger timing
+    
     tile.style.animationDelay = `${i * 120}ms`;
 
-    // add flip
+    
     tile.classList.add("flip");
 
-    // apply final color class
+
     tile.classList.add("reveal");
     tile.classList.add(rowMarks[i]);
 
@@ -293,7 +293,6 @@ function getNextWrongMessage() {
   // move to next message
   wrongMessageIndex++;
 
-  // if you want it to loop back to start:
   if (wrongMessageIndex >= WRONG_MESSAGES.length) {
     wrongMessageIndex = 0;
   }
